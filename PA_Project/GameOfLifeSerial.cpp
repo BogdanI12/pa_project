@@ -179,6 +179,9 @@ void write_final_state(string filename)
 int main(int argc, char** argv)
 {
     cout<<"Running Serial version"<<endl;
+    cout<<"Parameters: "<<endl;
+    cout<<"     Matrix: "<<N_ROWS<< " x "<<M_COLUMNS<<"."<<endl;
+    cout<<"     Iterations: "<<ITERATIONS<<"."<<endl;
     
     auto start = high_resolution_clock::now();
     

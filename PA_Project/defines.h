@@ -15,15 +15,15 @@
 // RUNNING_MODE = -1 -> don't run any version(used for generating matrix)
 // RUNNING_MODE = 0 -> run the serial version
 // RUNNING_MODE = 1 -> run the open mp version
-#define RUNNING_MODE 0
+#define RUNNING_MODE 1
 
 // REGENERATE_MATRIX = 0 -> don't
 // REGENERATE_MATRIX = 1 -> do
 #define REGENERATE_MATRIX 0
 
 // Matix NxM
-#define N_rows 256
-#define M_columns 256
+#define N_ROWS 256
+#define M_COLUMNS 256
 
 #define ITERATIONS 500
 

@@ -19,16 +19,16 @@ using namespace std;
 
 int main() {
     
-    cout<<"Generating matrix."<<endl;
+    cout<<"Generating matrix: "<<N_ROWS<<" x "<<M_COLUMNS<<"."<<endl;
     
     ofstream file(INPUT_FILE_PATH);
     
-    file<<N_rows<<" "<<M_columns;
+    file<<N_ROWS<<" "<<M_COLUMNS;
     file<<endl;
     
-    for(int i = 1; i<N_rows - 1; i++)
+    for(int i = 1; i<N_ROWS - 1; i++)
     {
-        for(int j = 1; j<M_columns - 1; j++)
+        for(int j = 1; j<M_COLUMNS - 1; j++)
         {
             int flag = rand() % 10;
             if(flag >= 9){
