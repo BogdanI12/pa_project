@@ -1,6 +1,6 @@
 # pa_project
 
-### Comile Serial 
+### Compile Serial 
 g++ GameOfLifeSerial.cpp -o serial_game
 
 ### Compile OpenMP
