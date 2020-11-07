@@ -1,6 +1,5 @@
 # pa_project
 
-<<<<<<< HEAD
 ### Results
 
 ### Serial Version
@@ -33,10 +32,7 @@ void apply_algorithm()
 ### Quick intro to OpenMP
 https://bisqwit.iki.fi/story/howto/openmp/
 
-### Comile Serial 
-=======
 ### Compile Serial 
->>>>>>> 81b4de1262cb057470b692260368af180b44bb72
 g++ GameOfLifeSerial.cpp -o serial_game
 
 ### Compile OpenMP
