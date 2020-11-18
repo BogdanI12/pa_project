@@ -30,7 +30,16 @@ void apply_algorithm()
 ```
 
 ### MPI Version
-
+        Matrix: 256x256
+        Iterations: 500
+        Duration 11 milliseconds.
+        Duration 11 milliseconds.
+        Duration 11 milliseconds.
+        Duration 11 milliseconds.
+        Duration 11 milliseconds.
+        
+        ! The total duration is the sum of those 5 process. (Each run for 11 ms) 
+        ! Total of 55 milliseconds.
 ```
     MPI_Init(NULL, NULL);
 
