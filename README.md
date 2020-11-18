@@ -29,6 +29,26 @@ void apply_algorithm()
 }
 ```
 
+### MPI Version
+
+```
+    MPI_Init(NULL, NULL);
+
+    // Get the number of processes
+    int rank_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &rank_size);
+
+    // Get the rank of the process
+    int rank_no;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank_no);
+
+    // if rank_no == 1/2/3/4/5.... { execute something; }
+    
+    // Finalize the MPI environment.
+    MPI_Finalize();
+
+```
+
 ### Quick intro to OpenMP
 https://bisqwit.iki.fi/story/howto/openmp/
 
@@ -37,4 +57,8 @@ g++ GameOfLifeSerial.cpp -o serial_game
 
 ### Compile OpenMP
  clang++ -Xpreprocessor -fopenmp -I/usr/local/include -L/usr/local/lib -lomp  GameOfLifeOpenMP.cpp -o openmp_game
+ 
+ ### Compile MPI
+mpicxx -o <exe_filename> <source_filename>.cpp
+mpirun -np <no_process> ./<exe_filename>
 

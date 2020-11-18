@@ -8,14 +8,16 @@
 #ifndef defines_h
 #define defines_h
 
-#define INPUT_FILE_PATH "/Users/bogdan/PA_Project/PA_Project/input.txt"
-#define OUTPUT_SERIAL_FILE_PATH "/Users/bogdan/PA_Project/PA_Project/output_serial.txt"
-#define OUTPUT_OPEN_MP_FILE_PATH "/Users/bogdan/PA_Project/PA_Project/output_open_mp.txt"
+#define INPUT_FILE_PATH "/Users/bogdan/pa_project_xcode/pa_project_xcode/input.txt"
+#define OUTPUT_SERIAL_FILE_PATH "/Users/bogdan/pa_project_xcode/pa_project_xcode/output_serial.txt"
+#define OUTPUT_OPEN_MP_FILE_PATH "/Users/bogdan/pa_project_xcode/pa_project_xcode/output_open_mp.txt"
+#define OUTPUT_MPI_FILE_PATH "/Users/bogdan/pa_project_xcode/pa_project_xcode/output_mpi.txt"
 
 // RUNNING_MODE = -1 -> don't run any version(used for generating matrix)
 // RUNNING_MODE = 0 -> run the serial version
 // RUNNING_MODE = 1 -> run the open mp version
-#define RUNNING_MODE 1
+// RUNNING_MODE = 2 -> run the mpi version
+#define RUNNING_MODE 2
 
 // REGENERATE_MATRIX = 0 -> don't
 // REGENERATE_MATRIX = 1 -> do
