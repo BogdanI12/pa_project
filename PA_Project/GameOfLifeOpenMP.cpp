@@ -72,28 +72,28 @@ void read_initial_state(string filename)
 void add_border()
 {
     // top line
-    #pragma omp parallel for
+    
     for(int i = 1; i<M - 1; i++)
     {
         current_iteration[0][i] = current_iteration[N - 2][i];
     }
 
     // bottom line
-    #pragma omp parallel for
+    
     for(int i = 1; i<M - 1; i++)
     {
         current_iteration[N - 1][i] = current_iteration[1][i];
     }
 
     // left column
-    #pragma omp parallel for
+    
     for(int i = 1; i<N - 1; i++)
     {
         current_iteration[i][0] = current_iteration[i][M - 2];
     }
 
     // right column
-    #pragma omp parallel for
+    
     for(int i = 1; i<N - 1; i++)
     {
         current_iteration[i][M - 1] = current_iteration[i][1];
@@ -131,14 +131,14 @@ char analyze_cell(int i, int j)
     else if(current_iteration[i][j] == '.' && alive_neighbours == 3)
         return 'X';
     
-    return 'X';
+    return '.';
 }
 
 void apply_algorithm()
 {
     int i, j = 0;
 
-    #pragma omp parallel for
+    
     for(i = 1; i<N - 1; i++)
     {
         for(j = 1; j<M - 1; j++)
@@ -152,7 +152,7 @@ void copy_matrix()
 {
     int i, j = 0;
 
-    #pragma omp parallel for
+    
     for(i = 1; i<N - 1; i++)
     {
         for(j = 1; j<M - 1; j++)
@@ -190,7 +190,6 @@ int main(int argc, char** argv)
     int iterations = ITERATIONS;
     
     alloc_memory(INPUT_FILE_PATH);
-    
     read_initial_state(INPUT_FILE_PATH);
     
     #pragma omp parallel for
@@ -202,6 +201,7 @@ int main(int argc, char** argv)
 
         copy_matrix();
     }
+
 
     write_final_state(OUTPUT_OPEN_MP_FILE_PATH);
     auto stop = high_resolution_clock::now();

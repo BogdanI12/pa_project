@@ -59,6 +59,7 @@ g++ GameOfLifeSerial.cpp -o serial_game
  clang++ -Xpreprocessor -fopenmp -I/usr/local/include -L/usr/local/lib -lomp  GameOfLifeOpenMP.cpp -o openmp_game
  
  ### Compile MPI
-mpicxx -o <exe_filename> <source_filename>.cpp
-mpirun -np <no_process> ./<exe_filename>
+mpicxx -o mp_game GameOfLifeMPI.cpp
+
+mpirun -np 7./mp_game
 
