@@ -2,15 +2,15 @@
 
 ### Configuration
 
-MacBook Pro (15-inch, 2019)
-Processor: 2,3 GHz 8-Core Intel Core i9
-Memory: 16 GB 2400 MHz DDR4
-Storage: 512 GB SSD
+    MacBook Pro (15-inch, 2019)
+    Processor: 2,3 GHz 8-Core Intel Core i9
+    Memory: 16 GB 2400 MHz DDR4
+    Storage: 512 GB SSD
 
-### Results
+# Results
 
 ## Test 1
-### Paramaters:
+#### Paramaters:
     Matrix: 2048 x 2048 
     Iterations: 8
     
@@ -26,8 +26,8 @@ Storage: 512 GB SSD
 #### OpenMP version
         Duration 61 miliseconds
 
-# Test 2
-### Paramaters:
+## Test 2
+#### Paramaters:
     Matrix: 1024 x 1024 
     Iterations: 32
     
@@ -44,8 +44,8 @@ Storage: 512 GB SSD
         Duration 65 miliseconds
         
 
-# Test 3
-### Paramaters:
+## Test 3
+#### Paramaters:
     Matrix: 512 x 512 
     Iterations: 256
     
@@ -64,12 +64,12 @@ Storage: 512 GB SSD
 
 ### How to      
 #### Compile Serial 
-g++ GameOfLifeSerial.cpp -o serial_game
+    g++ GameOfLifeSerial.cpp -o serial_game
 
 #### Compile OpenMP
-clang++ -Xpreprocessor -fopenmp -I/usr/local/include -L/usr/local/lib -lomp  GameOfLifeOpenMP.cpp -o openmp_game
+    clang++ -Xpreprocessor -fopenmp -I/usr/local/include -L/usr/local/lib -lomp  GameOfLifeOpenMP.cpp -o openmp_game
  
 #### Compile and Run MPI
-mpicxx -o mp_game GameOfLifeMPI.cpp
-mpirun -np <no_process> ./mp_game
+    mpicxx -o mp_game GameOfLifeMPI.cpp
+    mpirun -np <no_process> ./mp_game
 
